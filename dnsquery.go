@@ -83,7 +83,7 @@ func init() {
 }
 
 func getDefaultServer() string {
-	cfg, err := dns.ClientConfigFromFile("/etc/resolv/conf")
+	cfg, err := dns.ClientConfigFromFile("/etc/resolv.conf")
 	if err != nil {
 		fmt.Fprint(os.Stderr, "Could not find the default dns server")
 		fmt.Fprint(os.Stderr, err)
